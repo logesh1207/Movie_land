@@ -2,7 +2,8 @@ import {useState,useEffect } from 'react';
 //6a117f84
 import './App.css';
 import MovieCard from './Moviecard';
-const API_URL='http://www.omdbapi.com?apikey=6a117f84';
+//const API_URL='http://www.omdbapi.com?apikey=6a117f84';
+const API_URL = `${process.env.REACT_APP_API_URL}?apikey=${process.env.REACT_APP_API_KEY}`;
 const App=()=>{
     const [movie,setmovie]=useState([]);
     const [searchmovie,setsearchmovie]=useState('');
